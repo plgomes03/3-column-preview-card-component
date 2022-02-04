@@ -1,0 +1,115 @@
+@import "config";
+
+main {
+	@include flex-row;
+	justify-content: center;
+	align-items: stretch;
+	flex-wrap: wrap;
+	padding: 10% 0;
+}
+
+.container {
+	width: 300px;
+	@include flex-column;
+	padding: 40px 34px;
+}
+
+.icon,
+.text {
+	margin-bottom: 30px;
+}
+
+.text {
+	@include flex-column;
+	gap: 2rem;
+	padding-right: 6px;
+}
+
+h1 {
+	color: $very-light-gray;
+	font-size: 2rem;
+}
+
+p {
+	color: $transparent-white;
+}
+
+.btn {
+	width: 100%;
+
+	button {
+		@include flex-row;
+		justify-content: center;
+		width: 60%;
+		height: 40px;
+		padding: 1rem;
+		font: 400 0.9rem $lexend-deca;
+		border: 2px solid $very-light-gray;
+		border-radius: 30px;
+		outline: none;
+		background: $very-light-gray;
+
+		&:hover,
+		&:active {
+			transition: 200ms;
+			background: transparent;
+			cursor: pointer;
+		}
+	}
+}
+
+#sedans {
+	background: $bright-orange;
+	border-radius: 10px 10px 0 0;
+
+	button {
+		color: $bright-orange;
+
+		&:hover,
+		&:active {
+			color: $very-light-gray;
+		}
+	}
+}
+
+#suvs {
+	background: $dark-cyan;
+
+	button {
+		color: $dark-cyan;
+
+		&:hover,
+		&:active {
+			color: $very-light-gray;
+		}
+	}
+}
+
+#luxury {
+	background: $very-dark-cyan;
+	border-radius: 0 0 10px 10px;
+
+	button {
+		color: $very-dark-cyan;
+
+		&:hover,
+		&:active {
+			color: $very-light-gray;
+		}
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	.text {
+		margin-bottom: 90px;
+		padding-right: 22px;
+	}
+
+	#sedans {
+		border-radius: 10px 0 0 10px;
+	}
+
+	#luxury {
+		border-radius: 0 10px 10px 0;
+	}
+}

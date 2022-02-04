@@ -1,0 +1,46 @@
+// Colors
+
+/// Primary
+
+$bright-orange: #e38826;
+$dark-cyan: #006970;
+$very-dark-cyan: #004241;
+
+/// Neutral
+
+$transparent-white: #ffffffbf; // (paragraphs)
+$very-light-gray: #f2f2f2; // (background, headings, buttons)
+
+// fonts
+$big-shoulders-display: "Big Shoulders Display", cursive;
+$lexend-deca: "Lexend Deca", sans-serif;
+
+// flexbox
+@mixin flex-row {
+	display: flex;
+	align-items: center;
+}
+
+@mixin flex-column {
+	display: flex;
+    flex-direction: column;
+}
+
+
+// html
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-family: $lexend-deca;
+    font-size: 15px;
+}
+
+body {
+    @include flex-column;
+    justify-content: center;
+}
